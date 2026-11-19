@@ -1,0 +1,948 @@
+
+<!DOCTYPE html>
+<!-- WEBSITE 16 - VIDEO EDITOR PORTFOLIO -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>16. FRAMECUT® — Video Editor Portfolio</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        h1, h2, h3, .display {
+            font-family: 'Barlow Condensed', sans-serif;
+        }
+
+        .hero-reveal {
+            animation: revealUp 1s ease both;
+        }
+
+        .hero-visual {
+            animation: visualReveal 1.2s ease both;
+        }
+
+        .project img {
+            transition: transform .8s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .project:hover img {
+            transform: scale(1.07);
+        }
+
+        .project-image {
+            overflow: hidden;
+        }
+
+        .project-overlay {
+            opacity: 0;
+            transition: opacity .4s ease;
+        }
+
+        .project:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .lime-button {
+            transition: background .3s ease, color .3s ease, transform .3s ease;
+        }
+
+        .lime-button:hover {
+            background: white;
+            color: #111;
+            transform: translateY(-3px);
+        }
+
+        .dark-button {
+            transition: background .3s ease, color .3s ease;
+        }
+
+        .dark-button:hover {
+            background: #c8ff42;
+            color: #111;
+        }
+
+        .nav-item {
+            transition: color .3s ease;
+        }
+
+        .nav-item:hover {
+            color: #c8ff42;
+        }
+
+        .timeline-line {
+            background: repeating-linear-gradient(
+                to right,
+                #c8ff42 0px,
+                #c8ff42 7px,
+                transparent 7px,
+                transparent 14px
+            );
+        }
+
+        .moving-light {
+            animation: lightMove 5s ease-in-out infinite alternate;
+        }
+
+        .service-card {
+            transition: background .35s ease, transform .35s ease;
+        }
+
+        .service-card:hover {
+            background: #c8ff42;
+            color: #111;
+            transform: translateY(-7px);
+        }
+
+        @keyframes revealUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes visualReveal {
+            from {
+                opacity: 0;
+                transform: scale(.94);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes lightMove {
+            from {
+                transform: translateX(-10px);
+            }
+            to {
+                transform: translateX(10px);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-[#111111] text-white">
+
+    <!-- WEBSITE 16 - FRAMECUT VIDEO EDITOR PORTFOLIO -->
+
+    <!-- NAVBAR -->
+
+    <nav class="px-6 md:px-12 lg:px-20 py-6 flex justify-between items-center border-b border-white/10">
+
+        <a href="#" class="display text-3xl md:text-4xl font-black tracking-tight">
+            FRAME<span class="text-[#c8ff42]">CUT</span><span class="text-white/40">®</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-10 text-[10px] uppercase tracking-[.2em] font-bold text-white/60">
+
+            <a href="#work" class="nav-item">Selected Work</a>
+            <a href="#services" class="nav-item">Services</a>
+            <a href="#process" class="nav-item">Process</a>
+            <a href="#about" class="nav-item">About</a>
+
+        </div>
+
+        <a href="#contact" class="lime-button bg-[#c8ff42] text-black px-6 py-4 text-[10px] font-extrabold uppercase tracking-[.15em]">
+            Hire Me
+        </a>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <header class="px-6 md:px-12 lg:px-20 pt-20 md:pt-28 pb-24 overflow-hidden">
+
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+            <div class="lg:col-span-7 hero-reveal">
+
+                <div class="flex items-center gap-3 mb-8">
+
+                    <span class="w-2 h-2 rounded-full bg-[#c8ff42]"></span>
+
+                    <p class="text-[10px] uppercase tracking-[.25em] font-bold text-[#c8ff42]">
+                        Independent Video Editor & Motion Artist
+                    </p>
+
+                </div>
+
+                <h1 class="display text-[19vw] md:text-[13vw] font-black leading-[.78] tracking-[-.035em] uppercase">
+                    MAKE
+                    <br>
+                    EVERY
+                    <br>
+                    <span class="text-[#c8ff42]">FRAME.</span>
+                </h1>
+
+                <div class="flex flex-col sm:flex-row gap-8 sm:items-center mt-12">
+
+                    <p class="max-w-sm text-sm leading-8 text-white/50">
+                        Turning raw footage into powerful visual stories through precision editing, cinematic color and creative motion.
+                    </p>
+
+                    <a href="#work" class="dark-button inline-flex items-center justify-center border border-white/30 px-7 py-4 text-[10px] uppercase tracking-[.16em] font-bold">
+                        Explore Showreel
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="lg:col-span-5 relative hero-visual">
+
+                <div class="relative h-[420px] md:h-[590px] overflow-hidden border border-white/10">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=85"
+                        alt="Cinematic movie production scene"
+                        class="w-full h-full object-cover"
+                    >
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/10"></div>
+
+                    <div class="absolute top-6 left-6 flex items-center gap-3">
+
+                        <span class="bg-[#c8ff42] text-black text-[9px] font-black uppercase px-3 py-2">
+                            Showreel 2026
+                        </span>
+
+                        <span class="text-[9px] uppercase tracking-widest text-white/80">
+                            01:48 MIN
+                        </span>
+
+                    </div>
+
+                    <div class="absolute bottom-7 left-7 right-7">
+
+                        <p class="text-[9px] uppercase tracking-[.25em] text-[#c8ff42] font-bold">
+                            Visual Storytelling
+                        </p>
+
+                        <h2 class="display text-5xl md:text-6xl font-black uppercase mt-2">
+                            Beyond The Cut
+                        </h2>
+
+                        <div class="flex items-center gap-3 mt-6">
+
+                            <div class="w-10 h-10 rounded-full border border-white/50 flex items-center justify-center">
+                                <span class="text-xs">▶</span>
+                            </div>
+
+                            <p class="text-[9px] uppercase tracking-widest font-bold">
+                                Featured Reel
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="absolute -bottom-5 -right-4 bg-[#c8ff42] text-black px-6 py-5">
+
+                    <p class="display text-4xl font-black">4K</p>
+
+                    <p class="text-[8px] uppercase tracking-widest font-bold">
+                        Creative Production
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-24 border-t border-white/15 pt-8">
+
+            <div>
+                <p class="display text-4xl md:text-5xl font-bold text-[#c8ff42]">120+</p>
+                <p class="text-[9px] uppercase tracking-widest text-white/40 mt-2">Projects Edited</p>
+            </div>
+
+            <div>
+                <p class="display text-4xl md:text-5xl font-bold text-[#c8ff42]">08</p>
+                <p class="text-[9px] uppercase tracking-widest text-white/40 mt-2">Years Experience</p>
+            </div>
+
+            <div>
+                <p class="display text-4xl md:text-5xl font-bold text-[#c8ff42]">24</p>
+                <p class="text-[9px] uppercase tracking-widest text-white/40 mt-2">Happy Clients</p>
+            </div>
+
+            <div>
+                <p class="display text-4xl md:text-5xl font-bold text-[#c8ff42]">16+</p>
+                <p class="text-[9px] uppercase tracking-widest text-white/40 mt-2">Brands Worked With</p>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- SHOWREEL STRIP -->
+
+    <section class="bg-[#c8ff42] text-black px-6 md:px-12 lg:px-20 py-7">
+
+        <div class="flex flex-col md:flex-row justify-between gap-5 md:items-center">
+
+            <div>
+                <p class="text-[9px] uppercase tracking-[.25em] font-bold">
+                    The Creative Philosophy
+                </p>
+
+                <h2 class="display text-3xl md:text-5xl font-black uppercase mt-2">
+                    Every Second Has a Story.
+                </h2>
+            </div>
+
+            <p class="max-w-xs text-xs leading-6 text-black/65">
+                From the first cut to the final grade, every detail deserves attention.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SELECTED PROJECTS -->
+
+    <section id="work" class="px-6 md:px-12 lg:px-20 py-24 md:py-32">
+
+        <div class="flex flex-col md:flex-row justify-between md:items-end gap-8 mb-16">
+
+            <div>
+
+                <p class="text-[10px] uppercase tracking-[.25em] text-[#c8ff42] font-bold mb-6">
+                    01 / Selected Projects
+                </p>
+
+                <h2 class="display text-7xl md:text-9xl font-black uppercase leading-[.82] tracking-tight">
+                    THE<br>REEL<span class="text-[#c8ff42]">.</span>
+                </h2>
+
+            </div>
+
+            <p class="text-sm text-white/45 max-w-xs leading-7">
+                A selection of visual stories crafted for brands, filmmakers and creative minds.
+            </p>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-12 gap-7">
+
+            <!-- PROJECT 01 -->
+
+            <article class="project md:col-span-7">
+
+                <div class="project-image relative h-[350px] md:h-[500px] bg-[#242424]">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1300&q=85"
+                        alt="Cinematic mountain landscape film"
+                        class="w-full h-full object-cover"
+                    >
+
+                    <div class="project-overlay absolute inset-0 bg-black/40 flex items-center justify-center">
+
+                        <span class="border border-white px-8 py-4 text-[10px] uppercase tracking-widest font-bold">
+                            Mountain Film
+                        </span>
+
+                    </div>
+
+                    <span class="absolute top-5 left-5 bg-[#c8ff42] text-black px-4 py-2 text-[9px] uppercase tracking-widest font-bold">
+                        Featured
+                    </span>
+
+                </div>
+
+                <div class="flex justify-between items-end mt-6">
+
+                    <div>
+                        <p class="text-[9px] uppercase tracking-widest text-white/40">Brand Film / 2026</p>
+                        <h3 class="display text-3xl md:text-4xl font-bold uppercase mt-2">Into The Wild</h3>
+                    </div>
+
+                    <p class="text-[10px] text-[#c8ff42] font-bold">01 / 04</p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 02 -->
+
+            <article class="project md:col-span-5 md:mt-28">
+
+                <div class="project-image relative h-[330px] md:h-[410px] bg-[#242424]">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=85"
+                        alt="Creative event production photography"
+                        class="w-full h-full object-cover"
+                    >
+
+                    <div class="project-overlay absolute inset-0 bg-black/40 flex items-center justify-center">
+
+                        <span class="border border-white px-8 py-4 text-[10px] uppercase tracking-widest font-bold">
+                            Event Film
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-between items-end mt-6">
+
+                    <div>
+                        <p class="text-[9px] uppercase tracking-widest text-white/40">Event Film / 2025</p>
+                        <h3 class="display text-3xl font-bold uppercase mt-2">The Experience</h3>
+                    </div>
+
+                    <p class="text-[10px] text-[#c8ff42] font-bold">02 / 04</p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 03 -->
+
+            <article class="project md:col-span-5">
+
+                <div class="project-image relative h-[330px] md:h-[420px] bg-[#242424]">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1100&q=85"
+                        alt="Fashion editorial production"
+                        class="w-full h-full object-cover"
+                    >
+
+                    <div class="project-overlay absolute inset-0 bg-black/40 flex items-center justify-center">
+
+                        <span class="border border-white px-8 py-4 text-[10px] uppercase tracking-widest font-bold">
+                            Fashion Film
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-between items-end mt-6">
+
+                    <div>
+                        <p class="text-[9px] uppercase tracking-widest text-white/40">Fashion / 2025</p>
+                        <h3 class="display text-3xl font-bold uppercase mt-2">New Perspective</h3>
+                    </div>
+
+                    <p class="text-[10px] text-[#c8ff42] font-bold">03 / 04</p>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 04 -->
+
+            <article class="project md:col-span-7 md:mt-20">
+
+                <div class="project-image relative h-[350px] md:h-[500px] bg-[#242424]">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1300&q=85"
+                        alt="Cinematic night city visual"
+                        class="w-full h-full object-cover"
+                    >
+
+                    <div class="project-overlay absolute inset-0 bg-black/40 flex items-center justify-center">
+
+                        <span class="border border-white px-8 py-4 text-[10px] uppercase tracking-widest font-bold">
+                            Commercial Film
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="flex justify-between items-end mt-6">
+
+                    <div>
+                        <p class="text-[9px] uppercase tracking-widest text-white/40">Commercial / 2024</p>
+                        <h3 class="display text-3xl md:text-4xl font-bold uppercase mt-2">After The Lights</h3>
+                    </div>
+
+                    <p class="text-[10px] text-[#c8ff42] font-bold">04 / 04</p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services" class="bg-[#1c1c1c] px-6 md:px-12 lg:px-20 py-24 md:py-32">
+
+        <div class="grid lg:grid-cols-12 gap-12">
+
+            <div class="lg:col-span-4">
+
+                <p class="text-[10px] uppercase tracking-[.25em] text-[#c8ff42] font-bold mb-6">
+                    02 / What I Do
+                </p>
+
+                <h2 class="display text-7xl md:text-8xl font-black uppercase leading-[.85]">
+                    MADE<br>TO<br><span class="text-[#c8ff42]">MOVE.</span>
+                </h2>
+
+                <p class="text-sm text-white/45 leading-7 mt-8 max-w-xs">
+                    Creative editing solutions designed to make every visual story more engaging and memorable.
+                </p>
+
+            </div>
+
+
+            <div class="lg:col-span-8 grid sm:grid-cols-2 gap-4">
+
+                <article class="service-card border border-white/10 p-8 md:p-10">
+
+                    <p class="text-xs font-bold text-[#c8ff42]">01</p>
+
+                    <h3 class="display text-4xl font-bold uppercase mt-12">
+                        Video Editing
+                    </h3>
+
+                    <p class="text-xs leading-7 text-white/45 mt-5">
+                        Professional storytelling, clean cuts, pacing and polished final edits.
+                    </p>
+
+                    <p class="text-[9px] uppercase tracking-widest mt-8 font-bold">
+                        Narrative · Commercial · Social
+                    </p>
+
+                </article>
+
+
+                <article class="service-card border border-white/10 p-8 md:p-10">
+
+                    <p class="text-xs font-bold text-[#c8ff42]">02</p>
+
+                    <h3 class="display text-4xl font-bold uppercase mt-12">
+                        Color Grading
+                    </h3>
+
+                    <p class="text-xs leading-7 text-white/45 mt-5">
+                        Cinematic color correction and distinctive visual moods for every project.
+                    </p>
+
+                    <p class="text-[9px] uppercase tracking-widest mt-8 font-bold">
+                        Cinematic · Creative · Natural
+                    </p>
+
+                </article>
+
+
+                <article class="service-card border border-white/10 p-8 md:p-10">
+
+                    <p class="text-xs font-bold text-[#c8ff42]">03</p>
+
+                    <h3 class="display text-4xl font-bold uppercase mt-12">
+                        Motion Design
+                    </h3>
+
+                    <p class="text-xs leading-7 text-white/45 mt-5">
+                        Dynamic typography, animated elements and creative visual transitions.
+                    </p>
+
+                    <p class="text-[9px] uppercase tracking-widest mt-8 font-bold">
+                        Titles · Graphics · Animation
+                    </p>
+
+                </article>
+
+
+                <article class="service-card border border-white/10 p-8 md:p-10">
+
+                    <p class="text-xs font-bold text-[#c8ff42]">04</p>
+
+                    <h3 class="display text-4xl font-bold uppercase mt-12">
+                        Sound Design
+                    </h3>
+
+                    <p class="text-xs leading-7 text-white/45 mt-5">
+                        Thoughtful sound selection, audio balancing and immersive sound experiences.
+                    </p>
+
+                    <p class="text-[9px] uppercase tracking-widest mt-8 font-bold">
+                        Audio · Music · Atmosphere
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROCESS -->
+
+    <section id="process" class="px-6 md:px-12 lg:px-20 py-24 md:py-32">
+
+        <div class="flex flex-col md:flex-row justify-between md:items-end gap-8 mb-20">
+
+            <div>
+
+                <p class="text-[10px] uppercase tracking-[.25em] text-[#c8ff42] font-bold mb-6">
+                    03 / Behind The Edit
+                </p>
+
+                <h2 class="display text-7xl md:text-9xl font-black uppercase leading-[.8]">
+                    THE<br>PROCESS<span class="text-[#c8ff42]">.</span>
+                </h2>
+
+            </div>
+
+            <p class="text-sm text-white/45 max-w-xs leading-7">
+                Every great video is built with a clear creative process, from the first idea to the final export.
+            </p>
+
+        </div>
+
+
+        <div class="border-t border-white/15">
+
+            <article class="grid md:grid-cols-12 gap-6 py-9 border-b border-white/15 items-center">
+
+                <p class="md:col-span-1 text-[#c8ff42] text-xs font-bold">01</p>
+
+                <h3 class="md:col-span-4 display text-3xl md:text-4xl font-bold uppercase">
+                    Discovery
+                </h3>
+
+                <p class="md:col-span-5 text-xs leading-7 text-white/45">
+                    Understanding the project, audience, creative direction and visual objectives.
+                </p>
+
+                <p class="md:col-span-2 text-[9px] uppercase tracking-widest text-white/40 md:text-right">
+                    Planning
+                </p>
+
+            </article>
+
+
+            <article class="grid md:grid-cols-12 gap-6 py-9 border-b border-white/15 items-center">
+
+                <p class="md:col-span-1 text-[#c8ff42] text-xs font-bold">02</p>
+
+                <h3 class="md:col-span-4 display text-3xl md:text-4xl font-bold uppercase">
+                    Production Edit
+                </h3>
+
+                <p class="md:col-span-5 text-xs leading-7 text-white/45">
+                    Organizing footage, building the timeline and shaping the story through editing.
+                </p>
+
+                <p class="md:col-span-2 text-[9px] uppercase tracking-widest text-white/40 md:text-right">
+                    Creation
+                </p>
+
+            </article>
+
+
+            <article class="grid md:grid-cols-12 gap-6 py-9 border-b border-white/15 items-center">
+
+                <p class="md:col-span-1 text-[#c8ff42] text-xs font-bold">03</p>
+
+                <h3 class="md:col-span-4 display text-3xl md:text-4xl font-bold uppercase">
+                    Refinement
+                </h3>
+
+                <p class="md:col-span-5 text-xs leading-7 text-white/45">
+                    Applying color, motion, sound and final creative adjustments.
+                </p>
+
+                <p class="md:col-span-2 text-[9px] uppercase tracking-widest text-white/40 md:text-right">
+                    Finishing
+                </p>
+
+            </article>
+
+
+            <article class="grid md:grid-cols-12 gap-6 py-9 border-b border-white/15 items-center">
+
+                <p class="md:col-span-1 text-[#c8ff42] text-xs font-bold">04</p>
+
+                <h3 class="md:col-span-4 display text-3xl md:text-4xl font-bold uppercase">
+                    Final Delivery
+                </h3>
+
+                <p class="md:col-span-5 text-xs leading-7 text-white/45">
+                    Exporting and preparing the finished project for its intended platform.
+                </p>
+
+                <p class="md:col-span-2 text-[9px] uppercase tracking-widest text-white/40 md:text-right">
+                    Delivery
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="bg-[#c8ff42] text-black px-6 md:px-12 lg:px-20 py-24 md:py-32">
+
+        <div class="grid lg:grid-cols-12 gap-14 items-center">
+
+            <div class="lg:col-span-7">
+
+                <p class="text-[10px] uppercase tracking-[.25em] font-bold mb-8">
+                    04 / The Editor Behind The Frames
+                </p>
+
+                <h2 class="display text-7xl md:text-9xl font-black uppercase leading-[.82] tracking-tight">
+                    NOT JUST<br>
+                    A CUT.<br>
+                    <span class="text-white">A FEELING.</span>
+                </h2>
+
+                <p class="text-sm leading-8 text-black/65 max-w-xl mt-10">
+                    I'm Alex Morgan, an independent video editor and motion creative focused on turning ideas into visual experiences.
+                </p>
+
+                <p class="text-sm leading-8 text-black/65 max-w-xl mt-5">
+                    My approach combines visual rhythm, cinematic storytelling and attention to detail. I believe editing is more than arranging clips — it is about creating a connection between the story and its audience.
+                </p>
+
+                <a href="#contact" class="dark-button inline-flex items-center justify-center bg-black text-white px-8 py-5 mt-10 text-[10px] uppercase tracking-[.18em] font-bold">
+                    Work With Me
+                </a>
+
+            </div>
+
+
+            <div class="lg:col-span-5">
+
+                <div class="relative">
+
+                    <div class="h-[430px] md:h-[560px] overflow-hidden border-[10px] border-black">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1100&q=85"
+                            alt="Filmmaker working with camera equipment"
+                            class="w-full h-full object-cover"
+                        >
+
+                    </div>
+
+                    <div class="absolute -bottom-6 -left-6 bg-black text-white px-7 py-6">
+
+                        <p class="display text-4xl font-black">ALEX</p>
+
+                        <p class="text-[9px] uppercase tracking-widest text-[#c8ff42] mt-2">
+                            Editor & Creative Director
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="px-6 md:px-12 lg:px-20 py-28 md:py-36">
+
+        <div class="grid lg:grid-cols-12 gap-12 items-end">
+
+            <div class="lg:col-span-8">
+
+                <p class="text-[10px] uppercase tracking-[.25em] text-[#c8ff42] font-bold mb-8">
+                    05 / Let's Create Something
+                </p>
+
+                <h2 class="display text-7xl md:text-[11vw] font-black uppercase leading-[.8] tracking-tight">
+                    YOUR<br>
+                    STORY.<br>
+                    <span class="text-[#c8ff42]">MY CUT.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="lg:col-span-4">
+
+                <p class="text-sm leading-8 text-white/45 mb-9">
+                    Have a film, campaign or creative project in mind? Let's discuss your vision and bring it to the screen.
+                </p>
+
+                <a href="mailto:hello@framecut.studio" class="lime-button block bg-[#c8ff42] text-black p-7">
+
+                    <span class="block text-[9px] uppercase tracking-[.2em] font-bold">
+                        Available for projects
+                    </span>
+
+                    <span class="display block text-3xl md:text-4xl font-black uppercase mt-5">
+                        Let's Work Together
+                    </span>
+
+                    <span class="block text-xs font-bold mt-5">
+                        hello@framecut.studio
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="bg-[#1c1c1c] border-t border-white/10 px-6 md:px-12 lg:px-20 pt-14 pb-8">
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-12 gap-12 pb-16">
+
+            <div class="lg:col-span-5">
+
+                <a href="#" class="display text-4xl md:text-5xl font-black uppercase">
+                    FRAME<span class="text-[#c8ff42]">CUT</span>®
+                </a>
+
+                <p class="text-xs leading-7 text-white/40 max-w-xs mt-6">
+                    Independent video editing and motion creative studio. Making every frame count.
+                </p>
+
+                <p class="text-[9px] uppercase tracking-widest text-[#c8ff42] mt-8">
+                    Edit With Purpose.
+                </p>
+
+            </div>
+
+
+            <div class="lg:col-span-2">
+
+                <p class="text-[9px] uppercase tracking-[.2em] text-[#c8ff42] font-bold mb-7">
+                    Explore
+                </p>
+
+                <div class="flex flex-col gap-4 text-xs text-white/55">
+
+                    <a href="#work" class="nav-item">Projects</a>
+                    <a href="#services" class="nav-item">Services</a>
+                    <a href="#process" class="nav-item">Process</a>
+                    <a href="#about" class="nav-item">About</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="lg:col-span-2">
+
+                <p class="text-[9px] uppercase tracking-[.2em] text-[#c8ff42] font-bold mb-7">
+                    Social
+                </p>
+
+                <div class="flex flex-col gap-4 text-xs text-white/55">
+
+                    <a href="#" class="nav-item">Instagram</a>
+                    <a href="#" class="nav-item">Vimeo</a>
+                    <a href="#" class="nav-item">Behance</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="lg:col-span-3">
+
+                <p class="text-[9px] uppercase tracking-[.2em] text-[#c8ff42] font-bold mb-7">
+                    Studio Details
+                </p>
+
+                <p class="text-xs leading-7 text-white/55">
+                    Independent Creative Studio
+                    <br>
+                    Available Worldwide
+                </p>
+
+                <p class="text-xs text-white/55 mt-5">
+                    hello@framecut.studio
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="border-t border-white/10 pt-7 flex flex-col md:flex-row justify-between gap-4">
+
+            <p class="text-[9px] uppercase tracking-widest text-white/35">
+                © 2026 FRAMECUT. All Rights Reserved.
+            </p>
+
+            <p class="text-[9px] uppercase tracking-widest text-white/35">
+                Video Editing & Motion Design
+            </p>
+
+            <a href="#" class="text-[9px] uppercase tracking-widest text-white/60 hover:text-[#c8ff42] transition">
+                Back to Top
+            </a>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
